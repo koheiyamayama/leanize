@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc -p tsconfig.json",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,11 @@
   "homepage": "https://github.com/koheiyamayama/leanize#readme",
   "dependencies": {
     "fastify": "^3.27.4"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@tsconfig/node16-strictest-esm": "^1.0.0",
+    "@types/node": "^17.0.23",
+    "typescript": "^4.6.3"
   }
 }
