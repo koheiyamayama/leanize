@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/koheiyamayama/leanize/issues"
   },
-  "homepage": "https://github.com/koheiyamayama/leanize#readme"
+  "homepage": "https://github.com/koheiyamayama/leanize#readme",
+  "dependencies": {
+    "fastify": "^3.27.4"
+  }
 }
