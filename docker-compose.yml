@@ -1,9 +1,9 @@
 version: "3.9"
 services:
-  app:
+  backend:
     build:
       context: .
-      dockerfile: ./docker/app/Dockerfile
+      dockerfile: ./docker/backend/Dockerfile
     command: bash -c "npm run build && npm run start"
     ports: 
       - "3000:3000"
@@ -18,5 +18,13 @@ services:
       MYSQL_ROOT_PASSWORD: root
     volumes:
       - mysql-data:/var/lib/mysql
+  frontend:
+    build: 
+      context: .
+      dockerfile: ./docker/frontend/Dockerfile
+    ports:
+      - "4500:3000"
+    volumes:
+      - ./frontend:/app
 volumes:
   mysql-data:
